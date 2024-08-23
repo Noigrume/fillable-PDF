@@ -6,15 +6,15 @@ PDF Form Transformer is a web application that allows users to transform any PDF
 
 ## Features
 
--> PDF and Image Upload: Upload any PDF or image file to be transformed into a fillable PDF.
--> Automatic Shape Recognition: The app automatically detects shapes such as text boxes, checkboxes, and lines, converting them into interactive fields.
--> Manual Adjustment: Users can manually adjust or add fillable fields if needed, ensuring precise form customization.
--> Fillable PDF Output: Download the transformed document as a fillable PDF, ready for digital entry.
+- PDF and Image Upload: Upload any PDF or image file to be transformed into a fillable PDF.
+- Automatic Shape Recognition: The app automatically detects shapes such as text boxes, checkboxes, and lines, converting them into interactive fields.
+- Manual Adjustment: Users can manually adjust or add fillable fields if needed, ensuring precise form customization.
+- Fillable PDF Output: Download the transformed document as a fillable PDF, ready for digital entry.
 
 ## Technology Stack
 
--> Backend: Python with Django framework
--> Frontend: HTML, CSS, JavaScript
--> PDF Processing: Libraries such as PyMuPDF (Fitz), PDFMiner, or ReportLab for handling PDF files
--> Image Processing: PIL (Python Imaging Library) or OpenCV for image recognition and processing
+- Backend: Python with Django framework
+- Frontend: HTML, CSS, JavaScript
+- PDF Processing: Libraries such as PyMuPDF (Fitz), PDFMiner, or ReportLab for handling PDF files
+- Image Processing: PIL (Python Imaging Library) or OpenCV for image recognition and processing
 
