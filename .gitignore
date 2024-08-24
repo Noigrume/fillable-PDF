@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+*.migrations/
+
+# If you are using PostgreSQL or any other database, you might also ignore the database dump files
+*.pgsql
+*.sql
+
+# Local environment variables
+.env
+
+# Docker specific files
+docker-compose.yml
+Dockerfile
+*.dockerignore
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Static and media files
+staticfiles/
+media/
+
+# Editor files and system files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.swp
+*.bak
+*~
+*.tmproj
+*.project
+
+# Ignore all secrets
+secrets.json

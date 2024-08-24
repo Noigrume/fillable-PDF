@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mysql:8
+    container_name: fillable_pdf_mariadb
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+    #found in .env
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  
+      MYSQL_DATABASE: ${MYSQL_DATABASE}            
+      MYSQL_USER: ${MYSQL_USER}                    
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}           
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysql", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}", "-e", "SELECT 1"]
+      timeout: 20s
+      retries: 10
+  
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile  
+    container_name: fillable_pdf_backend
+    command: sh -c "python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    volumes:
+      - .:/app 
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:  # defines a volume called "mysql_data" to persist MySQL datas
