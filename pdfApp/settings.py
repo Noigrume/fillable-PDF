@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Your apps here
     'pdfApp',
+    'core',
 ]
 
 MIDDLEWARE = [
